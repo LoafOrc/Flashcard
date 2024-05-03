@@ -1,0 +1,34 @@
+[config]
+schemaVersion = "0.0.1"
+
+[package]
+namespace = "loaforc"
+name = "Flashcard"
+versionNumber = "0.3.3"
+description = "Makes the Video Camera more configurable!"
+websiteUrl = "https://thunderstore.io"
+containsNsfwContent = false
+[package.dependencies]
+BepInEx-BepInExPack = "5.4.2100"
+RugbugRedfern-MyceliumNetworking = "1.0.6"
+
+[build]
+icon = "./icon.png"
+readme = "./README.md"
+outdir = "./build"
+
+[[build.copy]]
+source = "./Flashcard/bin/Release/netstandard2.1/me.loaforc.Flashcard.dll"
+target = "./plugins/Flashcard/me.loaforc.Flashcard.dll"
+
+[[build.copy]]
+source = "./CHANGELOG.md"
+target = "./CHANGELOG.md"
+
+[publish]
+repository = "https://thunderstore.io"
+communities = [ "riskofrain2", ]
+[publish.categories]
+riskofrain2 = [ "items", "skills", ]
+
+
